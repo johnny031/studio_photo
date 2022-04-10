@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-@supports (-webkit-touch-callout: none) {
-  :root {
-    font-size: 6px;
-  }
-}
-
 .container {
   margin: 3em;
 }
