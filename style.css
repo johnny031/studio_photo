@@ -6,7 +6,7 @@
 
 @supports (-webkit-touch-callout: none) {
   :root {
-    font-size: 0.2vw;
+    font-size: 6px;
   }
 }
 
