@@ -22,6 +22,7 @@ $(".btn").click(function () {
     current_id = $(this).attr("id")
     $(".container").hide()
     $(".overlay").show()
+    $("body").css("background-color", "rgba(0, 0, 0, 0.8)")
     $(".img-wrapper").css("display", "flex")
     $(".img").attr("src", `https://drive.google.com/uc?export=view&id=${img_id_list[current_id][0]}`)
     $(".annotation").html(annotation_list[current_id][0])
@@ -30,5 +31,14 @@ $(".btn").click(function () {
 $(".img-wrapper").click(function () {
     $(".container").show()
     $(".overlay").hide()
+    $("body").css("background-color", "white")
     current_img = 0
 })
+
+let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+if (isSafari) {
+    $("html").css("font-size", "6px")
+    if (navigator.userAgent.match('CriOS')) {
+        $("html").css("font-size", "16px")
+    }
+}

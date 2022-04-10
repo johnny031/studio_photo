@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-@supports (-webkit-touch-callout: none) {
-  :root {
-    font-size: 6px;
-  }
-}
-
 .container {
   margin: 3em;
 }
@@ -41,8 +35,6 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .left-btn,
@@ -67,5 +59,8 @@ ol {
   .left-btn,
   .right-btn {
     top: calc((100vh - 100vw) / 2);
+  }
+  .img-wrapper {
+    height: 100vh;
   }
 }
