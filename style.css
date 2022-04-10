@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@supports (-webkit-touch-callout: none) {
+  :root {
+    font-size: 6px;
+  }
+}
+
+.container {
+  margin: 3em;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
+ol {
+  font-size: 4rem;
+  margin-left: 7rem;
+}
+
+.btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.annotation {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 4rem;
+}
+
+.img-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-btn,
+.right-btn {
+  position: fixed;
+  width: 50vmin;
+  height: 100vmin;
+  right: 50vw;
+  top: 0;
+}
+
+.right-btn {
+  left: 50vw;
+  top: 0;
+}
+
+.overlay {
+  display: none;
+}
+
+@media only screen and (orientation: portrait) {
+  .left-btn,
+  .right-btn {
+    top: calc((100vh - 100vw) / 2);
+  }
+}
