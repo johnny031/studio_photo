@@ -40,11 +40,3 @@ $(".img-wrapper").click(function () {
     $(".current_img").removeClass("current_img")
     current_img = 0
 })
-
-let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-if (isSafari) {
-    $("html").css("font-size", "6px")
-    if (navigator.userAgent.match('CriOS')) {
-        $("html").css("font-size", "16px")
-    }
-}
