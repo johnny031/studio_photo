@@ -37,6 +37,7 @@ $(".img-wrapper").click(function () {
     $(".container").show()
     $(".overlay").hide()
     $("body").css("background-color", "white")
+    $(".current_img").removeClass("current_img")
     current_img = 0
 })
 
