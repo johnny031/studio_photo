@@ -37,6 +37,14 @@ ol {
   align-items: center;
 }
 
+img {
+  display: none;
+}
+
+.current_img {
+  display: block;
+}
+
 .left-btn,
 .right-btn {
   position: fixed;
