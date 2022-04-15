@@ -30,7 +30,10 @@ $(".btn").click(function () {
     $("body").css("background-color", "rgba(0, 0, 0, 0.8)")
     $(".img-wrapper").css("display", "flex")
     for (let i = 0; i < 7; i++) {
-        $(`#img${i}`).attr("src", `https://drive.google.com/uc?export=view&id=${img_id_list[current_id][i]}`)
+        let delay = Math.floor(Math.random() * 100) + 200
+        setTimeout(function timer() {
+            $(`#img${i}`).attr("src", `https://drive.google.com/uc?export=view&id=${img_id_list[current_id][i]}`)
+        }, i * delay)
     }
     $("#img0").addClass("current_img")
     $(".annotation").html(annotation_list[current_id][0])
