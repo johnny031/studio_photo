@@ -3,16 +3,19 @@ let current_img = 0
 let vmin = Math.min(window.innerHeight, window.innerWidth)
 $(".img").css("width", vmin)
 
+for (let i = 0; i < name_list.length; i++) {
+    $(".name-list").append(`<li><button id="${i}" class="btn">${name_list[i]}</button></li>`)
+}
 
-$(".right-btn").click(function (e) {
-    if (current_img >= 5) return false
+$(".right-btn").on("click tap", function () {
+    if (current_img >= 6) return false
     current_img++
     $(".current_img").removeClass("current_img")
     $(`#img${current_img}`).addClass("current_img")
     $(".annotation").html(annotation_list[current_id][current_img])
 })
 
-$(".left-btn").click(function (e) {
+$(".left-btn").on("click tap", function () {
     if (current_img <= 0) return false
     current_img--
     $(".current_img").removeClass("current_img")
@@ -26,7 +29,7 @@ $(".btn").click(function () {
     $(".overlay").show()
     $("body").css("background-color", "rgba(0, 0, 0, 0.8)")
     $(".img-wrapper").css("display", "flex")
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 7; i++) {
         $(`#img${i}`).attr("src", `https://drive.google.com/uc?export=view&id=${img_id_list[current_id][i]}`)
     }
     $("#img0").addClass("current_img")
@@ -38,5 +41,8 @@ $(".img-wrapper").click(function () {
     $(".overlay").hide()
     $("body").css("background-color", "white")
     $(".current_img").removeClass("current_img")
+    for (let i = 0; i < 6; i++) {
+        $(`#img${i}`).attr("src", "")
+    }
     current_img = 0
 })
