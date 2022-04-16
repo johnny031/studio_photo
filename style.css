@@ -37,7 +37,9 @@ ol {
   align-items: center;
 }
 
-img {
+.img {
+  width: 100vmin;
+  height: 100vmin;
   display: none;
 }
 
